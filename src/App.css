@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-container{
+  padding: 15px;
+  background: #f3eeee;
+}
+.login-container div{
+  padding: 5px;
+}
+.login-btn{
+  background: #922194;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.login-container input{
+  height: 26px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.employee-section{
+  height: 100vh;
+  background-color: #3d3665;
+  overflow-y: hidden;
+}
+.emp-header, .emp-body{
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: 0 auto;
+  background: white;
+}
+.emp-body{
+  height: 100vh;
+  overflow-y: hidden;
+}
+.add-employee-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.add-employee-section, .performance-section{
+  padding: 15px;
+}
+.add-employee-section input{
+  height: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.add-employee-section div, .performance-section div{
+  padding: 5px;
+}
+.add-emp-btn{
+  width: 29%;
+  padding: 5px;
+}
+.add-emp-btn, .assign-reviewer-btn{
+  color: white;
+  background: #111150;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.performance-section select{
+  width: 100px;
+}
+.assign-reviewer-btn{
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.employee-table-section{
+  flex-basis: 80%;
+  padding: 20px;
+}
+.employee-table-section table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.emp-table-row button{
+  margin: 3px;
+  background: #111150;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+hr{
+  width: 75%;
+  margin: 0 auto;
+}
+.logout-btn{
+  position: absolute;
+  right: 0px;
+}
+.performance-review-list-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #3d3665;
+}
+.performance-review-list-section > div{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.performance-review-list-section > div > div{
+  padding: 15px;
+}
+.employee-update-body{
+  padding: 0px 0px !important;
+}
