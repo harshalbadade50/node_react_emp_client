@@ -18,11 +18,13 @@ class AddEmployeeComponent extends Component {
         }
     }
 
+    // collect employee data
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
+    // add employee details to employee table
     addEmployee = () => {
         addEmployee(this.state).then(res => {
             if(res && res.status === 200){

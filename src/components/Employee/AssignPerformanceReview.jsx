@@ -17,6 +17,7 @@ class AssignPerformanceReviewComponent extends Component {
     }
   }
 
+// create reviewer dropdown options
   reviewerList = () => {
       let optionsList = [];
       this.props.empDetails.forEach(item => {
@@ -28,6 +29,7 @@ class AssignPerformanceReviewComponent extends Component {
       return optionsList;
   }
 
+// create employee list dropdown options
   employeeList = () => {
       let optionsList = [];
       this.props.empDetails.forEach(item => {
@@ -42,8 +44,10 @@ class AssignPerformanceReviewComponent extends Component {
       return optionsList;
   }
 
+// create reviewer data to be saved
   handleSelect = (event) => {
       let empEmail = "";
+      // get the email of employee
       if(event.currentTarget.getAttribute("name") === "employee"){
         let optionsList = event.currentTarget.getElementsByTagName("option");
         for(let i = 0; i <= optionsList.length - 1; i++){
@@ -63,8 +67,8 @@ class AssignPerformanceReviewComponent extends Component {
       }
   }
 
+// save review data
   createReview = () => {
-          console.log('reivewData - ', this.state);
       if(this.state.reviewer && this.state.employee && this.state.email){
           let reivewData = {
               reviewer: this.state.reviewer,

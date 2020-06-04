@@ -21,6 +21,7 @@ class LoginComponent extends Component {
         history.push("/");
     }
 
+// when login mode is available change the route
     componentDidUpdate = (prevProps) => {
         if(prevProps.loginMode !== this.props.loginMode && this.props.loginMode){
            // const history = useHistory();
@@ -34,6 +35,7 @@ class LoginComponent extends Component {
         })
     }
 
+// call login service
     doLogin = () => {
        this.props.login(this.state);
     }

@@ -53,6 +53,7 @@ class UpdateEmployeeModalComponent extends Component {
         })
     }
 
+// collect updated employee data and send it to parent component
     updateEmployee = () => {
         this.props.selectedEmployee["firstName"] = this.state.firstName;
         this.props.selectedEmployee["lastName"] = this.state.lastName;
@@ -62,6 +63,7 @@ class UpdateEmployeeModalComponent extends Component {
         this.props.updateEmployee(this.props.selectedEmployee);
     }
 
+// collect data
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,

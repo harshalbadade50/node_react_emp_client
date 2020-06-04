@@ -19,12 +19,14 @@ class ReviewListComponent extends Component {
         }
     }
 
+// fetch review list from database
     componentDidUpdate = (prevProps) => {
         if(prevProps.username !== this.props.username && this.props.username){
             this.props.fetchReviewList(this.props.username);
         }
     }
 
+// open feedback modal
     openFeedbackModal = (item) => {
         this.setState({
             showFeedbackModal: true,
@@ -32,6 +34,7 @@ class ReviewListComponent extends Component {
         })
     }
 
+// hide feedback modal
     hideFeedbackModal = () => {
         this.setState({
             showFeedbackModal: false,
@@ -39,6 +42,7 @@ class ReviewListComponent extends Component {
         })
     }
 
+// save feedback details and close the modal
     saveFeedback = (details) => {
         updateFeedback(details).then(res => {
             this.props.fetchReviewList(this.props.username);
@@ -48,6 +52,7 @@ class ReviewListComponent extends Component {
         });
     }
 
+// create review table
     getReviewRows = () => {
         let optionsList = [];
         this.props.reviewList.forEach(item => {

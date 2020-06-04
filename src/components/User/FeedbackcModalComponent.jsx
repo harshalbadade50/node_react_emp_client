@@ -23,6 +23,7 @@ class FeedbackModalComponent extends Component {
         this.props.hideFeedbackModal(false);
     }
 
+// send feedback data to parent component
     updateFeedback = () => {
         this.props.selectedReview["feedback"] = this.feedbackRef.current.value;
         this.props.selectedReview["requireFeedback"] = false;
